@@ -1,0 +1,50 @@
+_repo: The-Story-Hour--A-Book-for-the-Home-and-the-Kindergarten_5835
+_version: 0.0.1
+creator:
+  authors:
+  - agent_name: Wiggin, Kate Douglas Smith
+    aliases:
+    - Riggs, George Christopher, Mrs.
+    - Smith, Kate Douglas
+    - Riggs, Kate Douglas Smith Wiggin
+    - Wiggin, Samuel Bradley, Mrs.
+    birthdate: 1856
+    deathdate: 1923
+    gutenberg_agent_id: '266'
+    url: http://www.gutenberg.org/2009/agents/266
+    wikipedia: http://en.wikipedia.org/wiki/Kate_Douglas_Wiggin
+  - agent_name: Smith, Nora Archibald
+    birthdate: 1859
+    deathdate: 1934
+    gutenberg_agent_id: '8693'
+    url: http://www.gutenberg.org/2009/agents/8693
+    wikipedia: http://en.wikipedia.org/wiki/Nora_Archibald_Smith
+description: ''
+gutenberg_bookshelf: Children's Literature
+gutenberg_issued: '2004-06-01'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '5835'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcc 'PZ'
+- !lcsh 'Children''s stories'
+- !lcsh 'Conduct of life -- Juvenile fiction'
+- !lcsh 'Short stories'
+- !lcsh 'Children -- Conduct of life -- Juvenile fiction'
+- GITenberg
+tableOfContents: The oriole's nest / K.D. Wiggin -- Dicky Smily's birthday / K.D.
+  Wiggin -- Aqua; or, the water baby / K.D. Wiggin -- Moufflou / Adapted from Ouida
+  by N.A. Smith -- Benjy in Beastland / Adapted from Mrs. Ewing by K.D. Wiggin --
+  The porcelain stove / Adapted from Ouida by K.D. Wiggin -- The babes in the wood
+  / E.S. Smith -- The story of Christmas / N.A. Smith -- The first Thanksgiving day
+  / N.A. Smith -- Little George Washington / N.A. Smith -- Great George Washington
+  / N.A. Smith -- The maple-leaf and the violet / N.A. Smith -- Mrs. Chinchilla /
+  K.D. Wiggin -- A story of the forest / N.A. Smith -- Piccola / N.A. Smith -- The
+  child and the world / K.D. Wiggin -- When I was a little girl / K.D. Wiggin -- Froebel's
+  birthday / N.A. Smith.
+title: 'The Story Hour: A Book for the Home and the Kindergarten'
+url: http://www.gutenberg.org/ebooks/5835
