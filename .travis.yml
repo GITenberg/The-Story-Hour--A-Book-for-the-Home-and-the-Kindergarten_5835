@@ -1,0 +1,61 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+before_install:
+- gem install asciidoctor -v 1.5.2
+- gem install tilt
+- sudo pip install git+https://github.com/gitenberg-dev/gitberg
+- sudo pip install pillow
+- sudo pip install cssutils
+- sudo pip install docutils
+- sudo pip install roman
+- sudo pip install git+https://github.com/gitenberg-dev/pg-epubmaker
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+
+- /usr/bin/python -c "from gitenberg import travis; travis.build_epub()"
+- ebook-convert book.epub book.mobi
+- xvfb-run ebook-convert book.epub book.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: GFvGyGhYSSEMKwZ6blYbZ7KxhcoFpClWugQBTPQTpDsNggvLbAdjpjMDyGoeA0rIWGjkUDmSbEHEdo9AAV8BJH+DPqEiN3NEzm2bGnLg2VKOPzNnqGGDRq8EEzn2Cq/2tFBbBAe+NdptB0FpfQdkeq0QOGLLr/xuW4/uBTZY5A2st0t3IzBK3qzzWFXA4Bmx0OKA2WHXizdR7g4DLtP/IJkNHpmbBAjhBtBLlmmrvTXkc89hW8lWpLxWABSU3JYUZPLzNheFC58U5MtUsY/L6N4FvuzRHa6AJspR+R8hGEWRXZJyodofqH0BhzrEYdMHE0oMzgm+dI6LDCIi6fxGxwWxAX4huzlD6wfRBQRti5j+Gwe5eg9GKMMNdnJKioMjtvn6HOfLWwngPRqM9chzwBWgGtIf6GAC4XsAygxbioyocgAdP/mm04XemO2tNsbx9fOc04MSSg1wLt6gLPulDomrGD04XrgJ2ElMiI3jDx8i+3/igSODz6fw/1S2/WrJxm94XUsFsZ29/Uyp4o+WBcXuXxBdYb5RBeCExt188QHgvldoABJam3vP/rYg5LJr1huf9h36/uPj9fDCfNYozyrfdSFx6hNbGpu/eHA+VJM0A5MS9a6kQh5duwQFPhmC9Z/iLqWFPwCLRuxTDiELSXx6vqtD1jA0Yr3ultEYOkA=
+  file:
+    - book.epub
+    - book.mobi
+    - book.pdf
+  "on":
+    repo: GITenberg/The-Story-Hour--A-Book-for-the-Home-and-the-Kindergarten_5835
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
+    - python-pip
+    - git
+    - python-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libfreetype6
+    - libfreetype6-dev
+    - zlib1g-dev
+    - python-lxml
+    - libxml2-dev
+    - libxslt1-dev
+    - tidy
