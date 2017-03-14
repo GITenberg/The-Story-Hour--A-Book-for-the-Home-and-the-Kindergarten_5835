@@ -1,5 +1,8 @@
 _repo: The-Story-Hour--A-Book-for-the-Home-and-the-Kindergarten_5835
-_version: 0.1.0
+_version: 0.2.0
+covers:
+- cover_type: generated
+  image_path: cover.png
 creator:
   authors:
   - agent_name: Wiggin, Kate Douglas Smith
@@ -20,6 +23,8 @@ creator:
     url: http://www.gutenberg.org/2009/agents/8693
     wikipedia: http://en.wikipedia.org/wiki/Nora_Archibald_Smith
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/5835#The-Story-Hour--A-Book-for-the-Home-and-the-Kindergarten
 gutenberg_bookshelf: Children's Literature
 gutenberg_issued: '2004-06-01'
 gutenberg_type: Text
